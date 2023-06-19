@@ -60,19 +60,16 @@ def load_data(database_filepath):
     
 
 def tokenize(text):
+    """Tokenization function: 
+    Input: raw text 
     
-    """
-    tokenize --> process of normalizing, tokenizing, stemming, lematizing, replacing url path, and removing stop words
+    Process: 
+    url replacement
+    normalized
+    stop words removed
+    lemmatized
     
-    Argument:
-    
-    text --> raw text messages
-    
-    Output:
-    
-    clean_tokens --> list of cleaned tokens
-    
-    """
+    Output: tokenized text"""
     
     url_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
     
@@ -83,16 +80,18 @@ def tokenize(text):
     
     # Normalize text
     text = re.sub(r"[^a-zA-Z0-9]", " ", text.lower())
-    stop_words = stopwords.words("english")
     
     #tokenize
     words = word_tokenize (text)
     
-    #stemming
-    stemmed = [PorterStemmer().stem(w) for w in words]
+    
+    # Remove Stopwords
+    stop_words = stopwords.words("english")
+    words = [w for w in words if w not in stop_words]
     
     #lemmatizing
-    clean_tokens = [WordNetLemmatizer().lemmatize(w) for w in stemmed if w not in stop_words]
+    clean = [WordNetLemmatizer().lemmatize(w, pos='n').strip() for w in words]
+    clean_tokens = [WordNetLemmatizer().lemmatize(w, pos='v').strip() for w in clean]
    
     return clean_tokens
 
