@@ -48,9 +48,14 @@ def load_data(database_filepath):
     y --> dataframe of labels
     
     """
-    conn = sqlite3.connect(database_filepath)
+
+    engine = create_engine('sqlite:///' + database_filepath)
+    df = pd.read_sql_table("CleanedDataTable",engine)
+    
+    #conn = sqlite3.connect(database_filepath)
     #engine = create_engine('sqlite:///' + str (database_filepath))
-    df = pd.read_sql_query('SELECT * FROM table1', conn)
+    #df = pd.read_sql_query('SELECT * FROM table1', conn)
+    
     X = df['message']
     y = df.iloc[:, 4:]
     category_names = y.columns
