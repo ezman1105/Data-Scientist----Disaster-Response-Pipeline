@@ -56,7 +56,7 @@ The project includes a web application that classifiy categories of disasters. U
 ## Screenshots
 
 Screenshot of top 10 categoreis
-![image](https://github.com/ezman1105/Data-Scientist----DisasterResponsePipeline/tree/f214c2c840186cf73c5ba80bfabfe294765079cd/Images/top10categories.png)
+![image](https://github.com/ezman1105/Data-Scientist----DisasterResponsePipeline/blob/03204a64a7d5d948bddf3f64b4821f38d715b49e/Images/top10categories.png)
 
 Screenshot of Distribution of "Aid-related" with genre
 ![image](https://github.com/ezman1105/Data-Scientist----DisasterResponsePipeline/blob/f214c2c840186cf73c5ba80bfabfe294765079cd/Images/aidrelated.png)
