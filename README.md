@@ -50,8 +50,8 @@ The project includes a web application that classifiy categories of disasters. U
 
 
 ## Licensing and Acknowledgements
-1. The datasets are shared by Udacity from [Figure Eight] (https://appen.com/#customers), an Append Company
-2. Most sections of Flask Web App is shared by [Udacity] (https://www.udacity.com/)
+1. The datasets are shared by Udacity from [Figure Eight](https://appen.com/#customers), an Append Company
+2. Most sections of Flask Web App is shared by [Udacity](https://www.udacity.com/)
 
 ## Screenshots
 
